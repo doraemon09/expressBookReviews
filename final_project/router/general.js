@@ -11,7 +11,7 @@ public_users.post("/register", (req,res) => {
     const this_password = req.body.password;
 
     if(this_username && this_password) {
-        if(!doesExist(this_username)) {
+        if(!isValid(this_username)) {
             users.push({
                 "username": this_username
                 , "password": this_password
